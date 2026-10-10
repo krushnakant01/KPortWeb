@@ -737,3 +737,19 @@ body:has(.contact-page) {
     margin-bottom: 20px;
   }
 }
+
+.hero-resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  background: rgba(56, 189, 248, 0.08);
+  color: #eaf7ff;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.hero-resume-button:hover {
+  transform: translateY(-3px);
+  background: rgba(56, 189, 248, 0.18);
+}
