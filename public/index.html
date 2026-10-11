@@ -1,51 +1,76 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080d1b">
   <meta name="description" content="Krushnakant Mhaske — Database Administrator and Software Developer.">
   <title>Krushnakant Mhaske | Portfolio</title>
+
+  <script>
+    try {
+      const theme = localStorage.getItem("kportweb-theme");
+      if (theme === "light" || theme === "dark") {
+        document.documentElement.dataset.theme = theme;
+      }
+    } catch (error) {}
+  </script>
+
   <link rel="stylesheet" href="/style.css">
   <script src="/script.js" defer></script>
 </head>
+
 <body>
   <header class="navbar">
     <a class="logo" href="#home">KK<span>.</span></a>
+
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="/contact.html">Contact</a>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch to light mode"
+        title="Switch theme"
+      >
+        <span class="sun-icon" aria-hidden="true">☀</span>
+        <span class="moon-icon" aria-hidden="true">☾</span>
+      </button>
     </nav>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero premium-hero" id="home">
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
 
       <div class="hero-container">
         <div class="hero-content">
-         
-<div class="profile-photo-wrapper">
-  <img
-    src="/profile.jpg"
-    alt="Krushnakant Mhaske"
-    class="profile-photo"
-    width="150"
-    height="150"
-  />
-</div>
+          <div class="profile-photo-wrapper">
+            <img
+              src="/profile.jpg"
+              alt="Krushnakant Mhaske"
+              class="profile-photo"
+              width="150"
+              height="150"
+            >
+          </div>
 
           <p class="eyebrow hero-eyebrow">
             <span class="hero-status-dot"></span>
             WELCOME TO MY DIGITAL WORLD
           </p>
 
-          <h1>Hi, I'm Krushnakant
+          <h1>
+            Hi, I'm Krushnakant
             <span class="hero-gradient-text">Mhaske.</span>
           </h1>
 
@@ -62,36 +87,31 @@
             <span>Java &amp; React.js</span>
           </div>
 
-    
-<div class="hero-actions">
-  <a class="button hero-primary-button" href="#projects">
-    Explore My Work ↗
-  </a>
-
-  <a class="hero-secondary-button" href="/contact.html">
-    Let's Connect →
-  </a>
-
-  <a
-    class="button hero-resume-button"
-    href="/resume.pdf"
-    download="Krushnakant_Mhaske_Resume.pdf"
-  >
-    Download Resume ↓
-  </a>
-</div>
-
+          <div class="hero-actions">
+            <a class="button" href="#projects">Explore My Work ↗</a>
+            <a class="button button-outline" href="/contact.html">Let's Connect →</a>
+            <a
+              class="button button-outline"
+              href="/resume.pdf"
+              download="Krushnakant_Mhaske_Resume.pdf"
+            >
+              Download Resume ↓
+            </a>
+          </div>
 
           <p class="hero-footnote">
             Driven by curiosity. Focused on continuous learning.
           </p>
         </div>
 
-        <!-- Interactive 3D Scene -->
-        <div class="hero-visual" id="heroScene" aria-label="Animated 3D technology scene">
+        <!-- CSS-based interactive 3D technology scene -->
+        <div
+          class="hero-visual"
+          id="heroScene"
+          aria-label="Interactive technology scene"
+        >
           <div class="scene-grid"></div>
           <div class="scene-glow"></div>
-
           <div class="scene-orbit orbit-one"></div>
           <div class="scene-orbit orbit-two"></div>
           <div class="scene-orbit orbit-three"></div>
@@ -105,23 +125,16 @@
           </div>
 
           <div class="tech-float tech-html">
-            <strong>HTML</strong>
-            <small>Structure</small>
+            <strong>HTML</strong><small>Structure</small>
           </div>
-
           <div class="tech-float tech-js">
-            <strong>JS</strong>
-            <small>Interaction</small>
+            <strong>JS</strong><small>Interaction</small>
           </div>
-
           <div class="tech-float tech-db">
-            <strong>SQL</strong>
-            <small>Database</small>
+            <strong>SQL</strong><small>Database</small>
           </div>
-
           <div class="tech-float tech-java">
-            <strong>JAVA</strong>
-            <small>Backend</small>
+            <strong>JAVA</strong><small>Backend</small>
           </div>
 
           <div class="scene-label">
@@ -134,38 +147,36 @@
       <a class="hero-scroll-link" href="#about">Discover More ↓</a>
     </section>
 
-    <section class="content about-section" id="about">
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2>About <span>Me.</span></h2>
+        <p>
+          Technology, creativity, and continuous learning drive my
+          professional journey.
+        </p>
+      </div>
+
       <div class="about-container">
         <div class="about-content">
-          <p class="eyebrow">GET TO KNOW ME</p>
-          <h2>About <span>Me.</span></h2>
-
-          <p class="about-lead">
-            Technology, creativity, and continuous learning
-            drive my professional journey.
-          </p>
-
-          <p class="about-description">
+          <p>
             I'm Krushnakant Mhaske, a technology professional with
             experience in database administration and software
             development. I enjoy exploring modern technologies
             and developing my skills through practical projects.
           </p>
-
-          <p class="about-description">
+          <p>
             My technical interests include frontend development,
             Java-based backend technologies, SQL databases,
             and responsive web experiences.
           </p>
-
-          <a class="button about-button" href="#experience">
-            Explore My Experience ↗
-          </a>
+          <a class="button" href="#experience">Explore My Experience ↗</a>
         </div>
 
         <div class="about-highlights">
           <article class="about-highlight">
-            <div class="about-highlight-icon">01</div>
+            <span class="highlight-number">01</span>
             <div>
               <h3>Database Administration</h3>
               <p>Professional experience at MachBizz Pvt. Ltd.</p>
@@ -173,7 +184,7 @@
           </article>
 
           <article class="about-highlight">
-            <div class="about-highlight-icon">02</div>
+            <span class="highlight-number">02</span>
             <div>
               <h3>Software Development</h3>
               <p>Internship experience with web technologies and databases.</p>
@@ -181,7 +192,7 @@
           </article>
 
           <article class="about-highlight">
-            <div class="about-highlight-icon">03</div>
+            <span class="highlight-number">03</span>
             <div>
               <h3>Continuous Learning</h3>
               <p>Expanding knowledge across frontend and backend technologies.</p>
@@ -191,71 +202,146 @@
       </div>
     </section>
 
-    <section class="content projects-section" id="projects">
-      <p class="eyebrow">SELECTED WORK</p>
-      <h2>My Projects</h2>
+    <!-- Projects -->
+    <section class="section projects-section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>My <span>Projects.</span></h2>
+        <p>A selection of my development interests and work.</p>
+      </div>
 
-      <div class="project-card">
-        <span class="project-label">01 / WEB DEVELOPMENT</span>
-        <h3>KPortWeb Portfolio</h3>
-        <p>
-          A responsive portfolio website with a modern dark design,
-          interactive visual elements, and a demo portfolio chatbot.
-        </p>
-        <a href="https://github.com/krushnakant01"
-           target="_blank" rel="noopener noreferrer">
-          Explore GitHub ↗
-        </a>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-topline">
+            <span class="project-number">01</span>
+            <span class="project-label">WEB DEVELOPMENT</span>
+          </div>
+          <h3>KPortWeb Portfolio</h3>
+          <p>
+            A responsive portfolio website featuring a modern interface,
+            interactive technology visuals, a theme switcher, and a
+            demo portfolio chatbot.
+          </p>
+          <div class="tag-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <a
+            href="https://github.com/krushnakant01"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore GitHub ↗
+          </a>
+        </article>
       </div>
     </section>
 
-    <section class="content experience-section" id="experience">
-      <div class="experience-heading">
+    <!-- Education -->
+    <section class="section education-section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+        <h2>Education <span>&amp; Learning.</span></h2>
+        <p>
+          Building a strong foundation in computer science,
+          programming, and software technologies.
+        </p>
+      </div>
+
+      <div class="education-grid">
+        <article class="education-card education-current">
+          <div class="education-card-top">
+            <div class="education-icon">MSc</div>
+            <span class="status-pill">Currently Pursuing</span>
+          </div>
+
+          <p class="card-kicker">POSTGRADUATE</p>
+          <h3>Master of Science (M.Sc.)</h3>
+          <p class="education-course">Computer Science</p>
+          <p class="education-description">
+            Currently pursuing postgraduate studies in Computer Science
+            to deepen my knowledge of computing and software technologies.
+          </p>
+        </article>
+
+        <article class="education-card">
+          <div class="education-card-top">
+            <div class="education-icon">BSc</div>
+            <span class="status-pill completed-status">Completed · 2025</span>
+          </div>
+
+          <p class="card-kicker">UNDERGRADUATE</p>
+          <h3>Bachelor of Computer Science (B.Sc.)</h3>
+          <p class="education-course">Computer Science</p>
+          <p class="education-institute">
+            Savitribai Phule Pune University, Pune
+          </p>
+          <p class="education-date">2023 — 2025</p>
+
+          <p class="education-description">
+            Developed a strong foundation in programming fundamentals,
+            algorithms, and data structures. Explored Object-Oriented
+            Programming in Java, database systems, and web technologies.
+          </p>
+
+          <div class="tag-list">
+            <span>Java</span>
+            <span>MySQL</span>
+            <span>Spring Framework</span>
+            <span>Spring Boot</span>
+            <span>Spring MVC</span>
+            <span>Spring Security</span>
+            <span>Web Technologies</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience-section" id="experience">
+      <div class="section-heading">
         <p class="eyebrow">MY PROFESSIONAL JOURNEY</p>
         <h2>Experience <span>&amp; Growth.</span></h2>
-        <p class="experience-intro">
+        <p>
           My journey across database administration, software development,
           and modern web technologies.
         </p>
       </div>
 
-      <div class="experience-timeline">
+      <div class="experience-grid">
         <article class="experience-card current-experience">
-          <div class="experience-top">
+          <div class="experience-card-top">
             <div class="experience-icon">DB</div>
-            <span class="experience-status">
-              <span class="status-dot"></span> Current Role
-            </span>
+            <span class="status-pill">Current Role</span>
           </div>
-
-          <p class="experience-date">JANUARY 2026 — PRESENT</p>
+          <p class="card-kicker">JANUARY 2026 — PRESENT</p>
           <h3>Database Administrator</h3>
           <p class="experience-company">MachBizz Pvt. Ltd.</p>
-          <p class="experience-description">
+          <p>
             Working as a Database Administrator while continuing
             to develop technical knowledge and professional skills.
           </p>
-          <div class="experience-tags">
+          <div class="tag-list">
             <span>Database Administration</span>
             <span>SQL</span>
           </div>
         </article>
 
         <article class="experience-card">
-          <div class="experience-top">
+          <div class="experience-card-top">
             <div class="experience-icon">DEV</div>
-            <span class="experience-status internship-status">Internship</span>
+            <span class="status-pill">Internship</span>
           </div>
-
-          <p class="experience-date">JUNE 2025 — DECEMBER 2025</p>
+          <p class="card-kicker">JUNE 2025 — DECEMBER 2025</p>
           <h3>Software Developer Intern</h3>
           <p class="experience-company">Hefshine Pvt. Ltd.</p>
-          <p class="experience-description">
+          <p>
             Worked with HTML, CSS, JavaScript, React.js, Git, GitHub,
             SQL databases, and SQL Server. Gained knowledge of Java,
             Advanced Java, Spring, and Spring Boot.
           </p>
-          <div class="experience-tags">
+          <div class="tag-list">
             <span>HTML &amp; CSS</span>
             <span>JavaScript</span>
             <span>React.js</span>
@@ -267,8 +353,9 @@
         </article>
       </div>
 
-      <div class="technical-skills">
-        <div class="skills-heading">
+      <!-- Technical Skills -->
+      <div class="skills-section">
+        <div class="section-heading">
           <p class="eyebrow">WHAT I WORK WITH</p>
           <h2>Technical <span>Skills.</span></h2>
         </div>
@@ -279,21 +366,25 @@
             <h3>Frontend Development</h3>
             <p>HTML, CSS, JavaScript, React.js</p>
           </article>
+
           <article class="skill-card">
             <span class="skill-number">02</span>
             <h3>Programming</h3>
             <p>Java, Advanced Java</p>
           </article>
+
           <article class="skill-card">
             <span class="skill-number">03</span>
             <h3>Backend Development</h3>
             <p>Spring, Spring Boot</p>
           </article>
+
           <article class="skill-card">
             <span class="skill-number">04</span>
             <h3>Databases</h3>
-            <p>SQL, SQL Server</p>
+            <p>SQL, MySQL, SQL Server</p>
           </article>
+
           <article class="skill-card">
             <span class="skill-number">05</span>
             <h3>Version Control</h3>
@@ -303,15 +394,15 @@
       </div>
     </section>
 
-    <section class="content contact-preview" id="contact">
+    <!-- Contact Preview -->
+    <section class="section contact-preview" id="contact">
       <p class="eyebrow">HAVE AN OPPORTUNITY?</p>
-      <h2>Let's Connect</h2>
+      <h2>Let's <span>Connect.</span></h2>
       <p>
         Have a project idea or a professional opportunity?
         I'd love to hear from you.
       </p>
       <a class="button" href="/contact.html">Contact Me ↗</a>
-      <a href="/contact.html">Get In Touch</a>
     </section>
   </main>
 
@@ -319,14 +410,18 @@
     © <span id="year"></span> KRUSHNAKANT MHASKE. All rights reserved.
   </footer>
 
-  <!-- Keep IDs used by the existing chatbot script -->
-  <button class="chat-launcher" id="chatLauncher" type="button"
-          aria-controls="chatPanel" aria-expanded="false">
+  <!-- Portfolio Chatbot -->
+  <button
+    class="chat-launcher"
+    id="chatLauncher"
+    type="button"
+    aria-controls="chatPanel"
+    aria-expanded="false"
+  >
     ✦ Ask Portfolio Bot
   </button>
 
-  <section class="chat-panel" id="chatPanel"
-           aria-label="Portfolio chatbot" hidden>
+  <section class="chat-panel" id="chatPanel" aria-label="Portfolio chatbot" hidden>
     <div class="chat-header">
       <div>
         <strong>✦ KK's Portfolio Bot</strong>
@@ -335,55 +430,34 @@
       <button id="closeChat" type="button" aria-label="Close chatbot">✕</button>
     </div>
 
-    <div class="chat-messages" id="chatMessages"
-         aria-live="polite" aria-relevant="additions">
+    <div class="chat-messages" id="chatMessages" aria-live="polite">
       <div class="message bot">
-        Hi! I'm KK's Portfolio Bot. Ask me about my skills, projects,
-        experience, or contact information!
+        Hi! I'm KK's Portfolio Bot. Ask me about my skills, education,
+        projects, experience, or contact information!
       </div>
     </div>
 
     <div class="quick-questions">
       <button type="button" data-question="What are your skills?">My Skills</button>
       <button type="button" data-question="Tell me about your projects">Projects</button>
+      <button type="button" data-question="Tell me about your education">Education</button>
       <button type="button" data-question="Tell me about your experience">Experience</button>
-      <button type="button" data-question="How can I contact you?">Contact</button>
     </div>
 
     <form class="chat-form" id="chatForm">
-      <input id="chatInput" type="text" maxlength="500"
-             placeholder="Type your question..." aria-label="Your question"
-             autocomplete="off" required>
+      <input
+        id="chatInput"
+        type="text"
+        maxlength="500"
+        placeholder="Type your question..."
+        aria-label="Your question"
+        autocomplete="off"
+        required
+      >
       <button id="sendChat" type="submit" aria-label="Send message">➤</button>
     </form>
+
     <p class="chat-note">Demo chatbot · Uses predefined responses</p>
   </section>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Independent pointer-based 3D effect.
-    (() => {
-      const scene = document.getElementById("heroScene");
-      if (!scene) return;
-
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-      if (reduceMotion.matches) return;
-
-      scene.addEventListener("pointermove", (event) => {
-        if (event.pointerType === "touch") return;
-        const rect = scene.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
-        scene.style.setProperty("--pointer-x", `${x * 12}deg`);
-        scene.style.setProperty("--pointer-y", `${y * -12}deg`);
-      });
-
-      scene.addEventListener("pointerleave", () => {
-        scene.style.setProperty("--pointer-x", "0deg");
-        scene.style.setProperty("--pointer-y", "0deg");
-      });
-    })();
-  </script>
 </body>
 </html>
