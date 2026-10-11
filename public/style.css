@@ -2315,3 +2315,29 @@ html[data-theme="light"] .core-caption {
     display: none;
   }
 }
+
+/* Subtle cursor-following point */
+.cursor-point {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(210, 215, 225, 0.55);
+  box-shadow: 0 0 5px rgba(210, 215, 225, 0.18);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition:
+    left 0.06s linear,
+    top 0.06s linear,
+    opacity 0.2s ease;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-point {
+    display: none;
+  }
+}
